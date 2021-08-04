@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="CSS/Calc_css.css">
+  <script src="script/jquery-3.6.0.js"></script>
+  <script src="script/calc-JS-string.js"></script>
+  <!-- <script src="script/calc-JS-number.js"></script> -->
+</head>
+
+<body>
+  <div id="page">
+    <!--Screen-->
+    <div>
+      <input type="text" id="function-screen" readonly>
+      <input type="text" id="number-screen" value="0" readonly>
+      <!--Button-->
+    </div>
+    <!-- +,-,*,/ -->
+    <div>
+      <button class="b50 calc-button" data-val='+'>
+        +
+      </button>
+      <button class="b50 calc-button" data-val='-'>
+        -
+      </button>
+      <button class="b50 calc-button" data-val='*'>
+        *
+      </button>
+      <button class="green calc-button" data-val='/'>
+        /
+      </button>
+    </div>
+    <!-- 7,8,9,+M -->
+    <div>
+      <button class="b75 calc-number" data-val=7 accesskey='h'>
+        7
+      </button>
+      <button class="b75 calc-number" data-val=8>
+        8
+      </button>
+      <button class="b75 calc-number" data-val=9>
+        9
+      </button>
+      <button class="green" id="ac" data-val='AC'>
+        AC
+      </button>
+    </div>
+    <!-- 4,5,6,-M -->
+    <div>
+      <button class="b75 calc-number" data-val=4>
+        4
+      </button>
+      <button class="b75 calc-number" data-val=5>
+        5
+      </button>
+      <button class="b75 calc-number" data-val=6>
+        6
+      </button>
+      <button class="green memory" data-val='+m'>
+        +M
+      </button>
+    </div>
+    <!-- 1,2,3,C -->
+    <div>
+      <button class="b75 calc-number" data-val=1>
+        1
+      </button>
+      <button class="b75 calc-number" data-val=2>
+        2
+      </button>
+      <button class="b75 calc-number" data-val=3>
+        3
+      </button>
+      <button class="green memory" data-val='-m'>
+        -M
+      </button>
+    </div>
+    <!-- 0,.,= -->
+    <div>
+      <button class="b75 calc-number" id="zero" data-val="0">
+        0
+      </button>
+      <button class="b75 calc-number" data-val='.'>
+        .
+      </button>
+      <button class="green" id="equal" data-val='='>
+        =
+      </button>
+      <button class="green calc-button" id="mr" data-val='mr'>
+        MR
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+* {
+  text-align: center;
+  font-size: 20px;
+}
+
+#page {
+  width: 250px;
+  padding: 30px 0 0 0;
+  margin: auto;
+}
+
+#function-screen {
+  width: 20%;
+  border-top-left-radius: 12px;
+  text-align: center;
+  color: white;
+  background-color: rgb(32, 32, 32);
+  padding: 40px 10px 0 0;
+  box-sizing: border-box;
+  border: none;
+  font-size: 25px;
+  cursor: default;
+  float: left;
+}
+
+#function-screen:focus-visible {
+  outline: none;
+}
+
+#number-screen {
+  width: 80%;
+  border-top-right-radius: 12px;
+  text-align: right;
+  color: white;
+  background-color: rgb(32, 32, 32);
+  padding: 40px 10px 0 0;
+  box-sizing: border-box;
+  border: none;
+  font-size: 25px;
+  cursor: default;
+  float: left;
+}
+
+#number-screen:focus-visible {
+  outline: none;
+}
+
+button {
+  height: 60px;
+  width: 25%;
+  color: white;
+  border: 1px solid rgb(40, 40, 40);
+  outline: none;
+  cursor: pointer;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  float: left;
+}
+
+button.b50 {
+  background-color: rgb(50, 50, 50);
+}
+
+button.b75 {
+  background-color: rgb(75, 75, 75);
+}
+
+button.green {
+  background-color: rgb(74, 126, 85);
+}
+
+button:focus {
+  background-color: rgb(49, 83, 57);
+  outline: none;
+}
+
+#mr {
+  border-bottom-right-radius: 12px;
+}
+
+#zero {
+  border-bottom-left-radius: 12px;
+}
