@@ -68,6 +68,11 @@ $(function () {
         operator = "/";
         display();
         break;
+        case 13:
+        action();
+        operator = "=";
+        display();
+        break;
       //All Clear Key
       case 8:
         $("#ac").click();
@@ -108,11 +113,6 @@ $(function () {
     }
   });
 
-  //Equal
-  $("#equal").click(function () {
-
-  });
-
   //All Clear
   $("#ac").click(function () {
     firstOperand = 0;
@@ -148,6 +148,10 @@ function action() {
       break;
     case "/":
       result = firstOperand / currentValue;
+      break;
+    case "=":
+      display();
+      result = currentValue;
       break;
     // case "mr":
     //   result = memoryValue;
