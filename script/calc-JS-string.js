@@ -10,6 +10,7 @@ $(function () {
   //Keyboard
   $(document).on("keydown", function (e) {
     let keyCode = e.keyCode;
+    e.preventDefault();
     switch (keyCode) {
       //Number Keys
       case 110:
@@ -68,7 +69,7 @@ $(function () {
         operator = "/";
         display();
         break;
-        case 13:
+      case 13:
         action();
         operator = "=";
         display();
@@ -77,7 +78,17 @@ $(function () {
       case 8:
         $("#ac").click();
         break;
-
+      //Memory Keys
+      case 38:
+        memoryValue += (currentValue * 1);
+        break;
+      case 40:
+        memoryValue -= (currentValue * 1);
+        break;
+      case 77:
+        currentValue = memoryValue;
+        display();
+        break;
       default:
         break;
     }
@@ -102,14 +113,15 @@ $(function () {
   $(".memory").click(function () {
     let memoryFunction = $(this).data('val');
     if (memoryFunction == '+m') {
-      memoryValue += currentValue;
+      memoryValue += (currentValue * 1);
     }
     if (memoryFunction == '-m') {
-      memoryValue -= currentValue;
+      memoryValue -= (currentValue * 1);
     }
-    if (memoryValue == 'mr') {
+    if (memoryValue == 'MR') {
+      firstOperand = memoryValue;
       currentValue = memoryValue;
-      display();
+      display()
     }
   });
 
@@ -153,9 +165,6 @@ function action() {
       display();
       result = currentValue;
       break;
-    // case "mr":
-    //   result = memoryValue;
-    //   break;
   }
   firstOperand = result;
   currentValue = result;
